@@ -1,0 +1,11 @@
+version: '1.1'
+
+services:
+  mlapp:
+    container_name: bangkit-ml-deployment
+    image: gcr.io/awmonitor-351813
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: Dockerfile
