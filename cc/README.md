@@ -26,13 +26,13 @@
 
 ## API
 
-### api-awmonitor-nodejs
+### api-aqimonitor-nodejs
 
 - untuk memasukkan data registrasi user kedalam database users
 - untuk melakukan pengecekan data login dari user mengunakan database user
 - untuk memasukkan dara history air weather kedalam database history
 
-### api-awmonitor-flask
+### api-aqimonitor-flask
 
 - untuk pembacaan data current air weather 34 provinsi di indonesia dari weatherbit
 - untuk pembacaan 3 data history dari weatherbit berupa air quality dan weather
