@@ -1,11 +1,14 @@
 FROM python:3.8
+# specify the current wd
+WORKDIR /user/src/app
 
-COPY requirements.txt .
+# migrate all local files in the computer to the remote container
+ENV APP /app
+WORKDIR $APP_HOME
+COPY . ./
 
-RUN pip install -r requirements.txt
+# Use pip to install the project requirements
+RUN python-pip install Flask gunicorn
 
-COPY . .
-
-EXPOSE 5000
-
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
+# Run the web server upon startup with eight threads 
+CMD exe gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
