@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/awmonitorc22ce02/ml2', '.']
+  args: ['build', '-t', 'gcr.io/awmonitorc22ce02/ml3', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/awmonitorc22ce02/ml2']
+  args: ['push', 'gcr.io/awmonitorc22ce02/ml3']
